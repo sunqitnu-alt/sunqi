@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="孙琦的个人主页：人工智能研究生，关注 Python、Agent、RAG、计算机视觉与 AI 应用落地。">
+  <title>孙琦｜AI Builder</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回顶部">孙琦</a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#about">关于我</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Graduate Student · Python / Agent / RAG</p>
+        <h1>你好，我是孙琦。</h1>
+        <p class="lead">天津师范大学人工智能专业在读研究生。我喜欢把一个还不太清楚的想法，拆成能运行、能展示、也能被别人真正用上的作品。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="./assets/resume.pdf" target="_blank" rel="noreferrer">查看 PDF 简历</a>
+          <a class="button" href="#projects">查看项目</a>
+        </div>
+      </div>
+      <div class="profile-card" aria-label="个人信息卡片">
+        <img src="./assets/profile.png" alt="孙琦证件照" class="avatar">
+        <div>
+          <h2>孙琦</h2>
+          <p>天津师范大学｜人工智能</p>
+          <p class="location">天津 · 滨海新区</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section two-column">
+      <div>
+        <p class="section-kicker">About</p>
+        <h2>关于我</h2>
+      </div>
+      <div class="content-block">
+        <p>我关注人工智能应用、智能体系统、RAG 与模型工程化落地。相比只停留在概念层面，我更在意一个方案能不能被快速验证、能不能跑通完整链路、能不能在展示时让别人一眼看懂。</p>
+        <p>在 Hackathon 或项目协作里，我通常承担 Python 后端、模型调用、Agent 工作流、数据处理与 Demo 联调相关工作，也会参与原型和展示逻辑设计。</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="section-kicker">Projects</p>
+        <h2>代表项目</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-head">
+            <h3>智能旅行规划 Agent 系统</h3>
+            <span>Python · LangChain · FastAPI · Vue3</span>
+          </div>
+          <p>面向自然语言出行需求，构建可多轮交互的旅行规划 Agent，支持用户围绕预算、天数、偏好和临时修改进行持续对话。</p>
+          <ul>
+            <li>使用 LangGraph 组织状态流转、意图路由、计划生成与用户打断。</li>
+            <li>封装高德地图 POI、天气、交通路线等工具调用，提升规划结果可落地性。</li>
+            <li>完成 FastAPI 接口、Vue3 页面与会话数据持久化，打通完整 Demo 链路。</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>道路裂缝语义分割系统</h3>
+            <span>Python · PyTorch · SegFormer</span>
+          </div>
+          <p>围绕道路裂缝像素级识别任务，完成数据清洗、模型训练、指标评估与可视化，重点处理小目标和类别不均衡问题。</p>
+          <ul>
+            <li>采用 SegFormer + Mix Transformer 建模多尺度特征和长程依赖。</li>
+            <li>结合 Dice Loss 与 CE Loss 优化裂缝细粒度边界识别效果。</li>
+            <li>处理近 4000 张图像，测试集 mIoU 达 80%，准确率接近 100%。</li>
+          </ul>
+        </article>
+
+        <article class="project-card wide">
+          <div class="project-head">
+            <h3>OCT 影像智能分析平台</h3>
+            <span>Python · RAG · LangGraph · MCP</span>
+          </div>
+          <p>整合课题组多个成熟深度学习模型，搭建统一的 OCT 影像分析平台，将支架检测与三维重建、关键帧渲染、斑块分割、病例检索、血栓识别等功能接入同一工作流。</p>
+          <ul>
+            <li>基于 LangGraph 构建 ReAct 智能体，根据分析目标自动规划任务步骤。</li>
+            <li>通过 Function Call / MCP 接入不同深度学习模型，降低多模型系统耦合度。</li>
+            <li>使用 Faiss + BM25 进行病例检索，提高影像分析过程中的信息获取效率。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section two-column">
+      <div>
+        <p class="section-kicker">Skills</p>
+        <h2>技能栈</h2>
+      </div>
+      <div class="skills">
+        <span>Python</span>
+        <span>PyTorch</span>
+        <span>FastAPI</span>
+        <span>LangChain</span>
+        <span>LangGraph</span>
+        <span>RAG</span>
+        <span>Vue3 / TypeScript</span>
+        <span>Figma</span>
+        <span>ClaudeCode / Codex</span>
+        <span>Vibe Coding</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2>联系我</h2>
+        <p>如果你正在寻找 AI / Agent / Python 工程方向的队友，欢迎联系我。</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:sunqi772025@163.com">sunqi772025@163.com</a>
+        <a href="tel:13021335906">13021335906</a>
+        <a href="./assets/resume.pdf" target="_blank" rel="noreferrer">下载简历 PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 孙琦</span>
+    <span>Built for GitHub Pages</span>
+  </footer>
+</body>
+</html>
