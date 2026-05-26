@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>孙琦｜AI产品经理实习简历｜李姝楠模板版</title>
+        <style>
+            :root {
+                --ink: #1f1f1f;
+                --muted: #666666;
+                --accent: #234575;
+                --resume-blue: #7f99c7;
+                --bar: #d9d9d9;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: #ffffff;
+                color: var(--ink);
+                font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+            }
+            .page {
+                width: 210mm;
+                height: 297mm;
+                margin: 0 auto 10mm;
+                padding: 10mm 12mm 10mm;
+                background: #ffffff;
+                box-shadow: none;
+                overflow: hidden;
+            }
+            .header {
+                position: relative;
+                min-height: 42mm;
+                padding: 8mm 38mm 0 0;
+            }
+            .resume-mark {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: var(--resume-blue);
+                font-size: 17px;
+                font-weight: 700;
+                letter-spacing: 0.36em;
+                text-transform: uppercase;
+                white-space: nowrap;
+                margin: 0;
+            }
+            h1 {
+                margin: 0 0 2mm;
+                padding-bottom: 2mm;
+                border-bottom: 0.8mm solid var(--accent);
+                font-size: 24px;
+                line-height: 1;
+                letter-spacing: 0.04em;
+                color: var(--accent);
+                width: 132mm;
+            }
+            .meta {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1mm 18mm;
+                margin: 0;
+                color: var(--muted);
+                font-size: 12.4px;
+                line-height: 1.75;
+                font-weight: 700;
+            }
+            .meta b {
+                color: #4f4f4f;
+                margin-right: 2mm;
+            }
+            .intent {
+                grid-column: 1 / -1;
+            }
+            .photo {
+                position: absolute;
+                right: 5mm;
+                top: 10mm;
+                width: 27mm;
+                height: 33mm;
+                object-fit: cover;
+                object-position: center top;
+                border: 1px solid #eeeeee;
+                background: #ffffff;
+            }
+            .section {
+                margin-top: 4.6mm;
+            }
+            .section-title {
+                display: block;
+                margin: 0 0 1.7mm;
+                padding: 0 0 0.8mm;
+                border-bottom: 0.7mm solid var(--accent);
+                background: transparent;
+                color: var(--accent);
+                font-size: 18px;
+                line-height: 1;
+                font-weight: 900;
+                letter-spacing: 0;
+            }
+            .row {
+                display: grid;
+                grid-template-columns: 35mm 1fr 34mm;
+                gap: 3mm;
+                align-items: baseline;
+                margin: 0 0 1.2mm;
+                font-size: 13.2px;
+            }
+            .row .org {
+                font-size: 13.8px;
+                font-weight: 900;
+                color: #111111;
+            }
+            .row .role {
+                color: #111111;
+                font-weight: 900;
+            }
+            .row .date {
+                color: #111111;
+                text-align: right;
+                white-space: nowrap;
+                font-weight: 900;
+            }
+            .para,
+            .line {
+                margin: 0 0 1.2mm;
+                font-size: 12.4px;
+                line-height: 1.62;
+                color: #222222;
+            }
+            .line b,
+            .para b {
+                color: #242424;
+            }
+            ul {
+                margin: 0 0 2.4mm;
+                padding: 0;
+                list-style: none;
+            }
+            li {
+                position: relative;
+                margin: 0 0 0.95mm;
+                padding-left: 5.2mm;
+                font-size: 12.4px;
+                line-height: 1.62;
+                color: #222222;
+            }
+            li:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.75em;
+                width: 1.5mm;
+                height: 1.5mm;
+                border-radius: 50%;
+                background: #333333;
+                transform: translateY(-50%);
+            }
+            .project {
+                margin: 0 0 3.2mm;
+            }
+            .project-head {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 6mm;
+                align-items: baseline;
+                margin: 0 0 1.4mm;
+                padding: 0.7mm 1mm;
+                background: var(--bar);
+            }
+            .project h3 {
+                margin: 0;
+                font-size: 13.2px;
+                line-height: 1.35;
+                color: #111111;
+                font-weight: 900;
+            }
+            .project .date {
+                color: #111111;
+                font-size: 12.8px;
+                white-space: nowrap;
+                font-weight: 900;
+            }
+            .subhead {
+                margin: 1mm 0 0.6mm;
+                font-size: 12.4px;
+                line-height: 1.7;
+                color: #111111;
+                font-weight: 900;
+            }
+            .numbered {
+                counter-reset: item;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .numbered li {
+                counter-increment: item;
+                padding-left: 7.2mm;
+            }
+            .numbered li:before {
+                content: counter(item) ".";
+                top: 0;
+                width: auto;
+                height: auto;
+                border-radius: 0;
+                background: transparent;
+                transform: none;
+                color: #242424;
+                font-weight: 900;
+            }
+            .skills-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 8mm;
+            }
+            .compact li {
+                margin-bottom: 1.4mm;
+            }
+            .certs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2mm 8mm;
+                margin: 0;
+                font-size: 12.4px;
+                line-height: 1.62;
+                color: #222222;
+            }
+            .certs span {
+                white-space: nowrap;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            @media print {
+                body {
+                    background: #ffffff;
+                }
+                .page {
+                    margin: 0;
+                    box-shadow: none;
+                    page-break-after: always;
+                }
+                .page:last-child {
+                    page-break-after: auto;
+                }
+                * {
+                    print-color-adjust: exact;
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="page">
+            <header class="header">
+                <div class="resume-mark">个人简历 / Resume</div>
+                <h1>孙琦</h1>
+                <div class="meta">
+                    <div><b>所在城市：</b>天津市滨海新区</div>
+                    <div><b>电　　话：</b>13021335906</div>
+                    <div><b>当前身份：</b>人工智能专业硕士研究生在读</div>
+                    <div><b>邮　　箱：</b>sunqi772025@163.com</div>
+                    <div class="intent"><b>求职意向：</b>AI 产品经理实习生 / 大模型应用产品 / Agent 产品 / AI 工具产品</div>
+                </div>
+                <img class="photo" src="../assets/images/证件照.png" alt="孙琦证件照" />
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">教育背景</h2>
+                <div class="row">
+                    <div class="org">天津师范大学</div>
+                    <div class="role">｜ 人工智能 ｜ 硕士研究生在读</div>
+                    <div class="date">在读</div>
+                </div>
+                <p class="line">
+                    <b>研究 / 实践方向：</b>AI 应用、智能体系统、RAG、模型工程化落地、医学影像智能分析平台、语音情感计算与抑郁状态识别
+                </p>
+                <p class="line"><b>学生工作：</b>研究生会宣传部部长、专硕组织委员</p>
+                <div class="row">
+                    <div class="org">天津师范大学</div>
+                    <div class="role">｜ 人工智能 ｜ 本科 ｜ GPA：3.4 / 4.0</div>
+                    <div class="date">2021.09-2025.06</div>
+                </div>
+                <p class="line"><b>毕业论文：</b>基于 SegFormer 模型的图像语义分割方法研究</p>
+                <p class="line"><b>核心课程：</b>人工智能导论、数字图像处理、机器人学、C 语言程序设计、高等数学、线性代数等</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">专业技能</h2>
+                <div class="skills-grid">
+                    <ul class="compact">
+                        <li>具备 AI 产品需求拆解、功能梳理、用户流程设计、MVP 规划与 Demo 展示表达能力。</li>
+                        <li>熟悉 Figma、Dify、Coze、AI PPT、AI 文档整理、AI 表格处理、AI 信息检索与资料总结等工具。</li>
+                        <li>理解 Agent 工作流、RAG 检索增强、ReAct Agent、Function Call / MCP、工具调用与状态流转设计。</li>
+                    </ul>
+                    <ul class="compact">
+                        <li>具备 Python、TypeScript、PyTorch、HuggingFace Transformers 基础实践经验。</li>
+                        <li>关注 AI 产品中的幻觉控制、结果可信度、异常兜底、用户反馈与可用性评估。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">项目经历</h2>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>智能旅行规划 Agent 系统｜AI 旅行规划产品 / 多轮对话 Agent</h3>
+                        <div class="date">项目实践</div>
+                    </div>
+                    <p class="para">
+                        <b>项目核心概况：</b>面向自然语言旅行规划场景，设计可多轮对话、可打断、可微调和可重写行程的 AI 旅行助手。系统结合真实 POI、天气和交通路线生成旅行计划，并支持用户持续修改。
+                    </p>
+                    <div class="subhead">核心工作职责与成果</div>
+                    <ol class="numbered">
+                        <li><b>需求拆解与路径设计：</b>围绕“快速获得可执行旅行方案”的目标，梳理“提出需求 - 补充偏好 - 生成行程 - 修改方案 - 查看详情”的核心路径，明确 Agent 各阶段的信息收集、反馈方式和异常处理。</li>
+                        <li><b>Agent 交互设计：</b>设计多轮对话下的意图识别与状态流转逻辑，支持用户用自然语言打断、补充约束、微调或重写当前计划，提升 AI 产品交互自由度。</li>
+                        <li><b>结果可用性优化：</b>将高德地图 POI、天气、交通路线封装为工具调用，通过 ReAct 降低大模型幻觉，让行程方案更接近真实可执行场景。</li>
+                        <li><b>Demo 闭环落地：</b>参与 FastAPI 接口、Vue3 页面、会话状态和行程快照设计，完成从用户输入、Agent 推理、工具调用到前端展示的完整体验闭环。</li>
+                    </ol>
+                </article>
+
+                <article class="project">
+                    <div class="project-head">
+                        <h3>OCT 影像智能分析平台｜医学影像 AI 平台 / 智能工作流</h3>
+                        <div class="date">项目实践</div>
+                    </div>
+                    <p class="para">
+                        <b>项目核心概况：</b>面向 OCT 影像分析场景，整合课题组多个成熟深度学习模型，将支架检测与三维重建、关键帧提取与渲染、斑块分割、病例检索、血栓识别、坐标转换等能力接入统一平台。
+                    </p>
+                    <div class="subhead">核心工作职责与成果</div>
+                    <ol class="numbered">
+                        <li><b>复杂场景抽象：</b>梳理医学影像分析流程，将多个分散模型能力拆解为可被智能体调用的功能模块，降低用户在多个工具之间切换的操作成本。</li>
+                        <li><b>智能工作流设计：</b>基于 LangGraph 构建 ReAct 智能体，使系统能根据分析目标自主规划任务步骤，推动平台从“模型集合”转向“统一智能分析工作台”。</li>
+                        <li><b>检索体验优化：</b>使用 Faiss + BM25 构建病例检索方案，帮助用户在分析过程中快速获取相似病例和相关信息，为 RAG 问答与辅助分析提供基础。</li>
+                        <li><b>模型能力产品化：</b>通过 Function Call / MCP 接入深度学习模型，设计统一调用入口和交互方式，使底层模型能力能够以平台功能形式被使用。</li>
+                    </ol>
+                </article>
+            </section>
+        </section>
+
+        <section class="page">
+            <section class="section" style="margin-top: 0">
+                <h2 class="section-title">项目经历</h2>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>基于大模型语音表征的抑郁状态识别研究｜算法研发</h3>
+                        <div class="date">2025.09-至今</div>
+                    </div>
+                    <p class="para">
+                        <b>项目核心概况：</b>聚焦语音情感计算与抑郁状态识别任务，基于公开抑郁语音数据集开展分类与回归建模研究；围绕语音大模型表征学习、时序情感建模与抑郁程度预测，完成模型训练、微调与实验优化。
+                    </p>
+                    <div class="subhead">核心工作职责与成果</div>
+                    <ol class="numbered">
+                        <li><b>语音数据处理与特征工程：</b>负责抑郁语音数据预处理与特征构建，完成音频切分、降噪、归一化等操作；基于 Librosa、OpenSMILE 提取 MFCC、Mel-Spectrogram、Prosody 等语音特征，并构建深度学习训练 Pipeline。</li>
+                        <li><b>自监督语音模型与 Audio LLM 研究：</b>基于 Whisper、HuBERT、Wav2Vec2 等自监督语音模型开展情感表征学习与抑郁识别研究，探索 Qwen-Audio 等 Audio LLM 在语音情感理解任务中的应用。</li>
+                        <li><b>模型训练与任务优化：</b>基于 PyTorch 与 Transformers 完成分类与回归任务训练，针对类别不平衡与情绪特征弱表达问题，引入 Focal Loss、数据增强、学习率调度等策略优化模型鲁棒性与泛化能力。</li>
+                        <li><b>实验分析与科研支撑：</b>完成模型实验设计、指标分析与消融实验，评估不同语音表征模型在抑郁检测任务中的性能差异；参与论文撰写与实验文档整理，支撑科研项目推进。</li>
+                    </ol>
+                </article>
+
+                <article class="project">
+                    <div class="project-head">
+                        <h3>道路裂缝图像语义分割系统｜计算机视觉模型实践</h3>
+                        <div class="date">本科毕设</div>
+                    </div>
+                    <p class="para">
+                        <b>项目核心概况：</b>围绕道路裂缝像素级识别任务，完成近 4000 张图像的数据清洗、模型训练、指标评估和结果分析；模型迭代约 16 万步后稳定收敛，测试集 mIoU 达 80%，准确率接近 100%。
+                    </p>
+                    <div class="subhead">核心工作职责与成果</div>
+                    <ol class="numbered">
+                        <li><b>数据闭环理解：</b>理解 AI 产品中“数据质量 - 模型效果 - 指标评估 - 产品可用性”的基本闭环，能够从数据和指标角度判断模型能力是否适合落地。</li>
+                        <li><b>模型训练与优化：</b>针对裂缝与背景像素不均衡、复杂背景下细粒度识别困难等问题，采用 SegFormer 架构和 Dice Loss + CE Loss 优化模型效果。</li>
+                        <li><b>算法沟通能力：</b>能从模型指标和错误样例出发判断 AI 能力边界，具备与算法同学沟通数据、训练、评估和模型效果的基础能力。</li>
+                    </ol>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">校园经历</h2>
+                <div class="row">
+                    <div class="org">研究生会宣传部</div>
+                    <div class="role">部长</div>
+                    <div class="date">研究生阶段</div>
+                </div>
+                <ul class="compact">
+                    <li><b>内容策划与传播：</b>负责宣传内容策划、视觉表达、活动传播与跨部门协作，能够根据活动目标组织内容结构，协调素材、文案、设计和发布节奏。</li>
+                    <li><b>能力迁移：</b>该经历可迁移到产品经理工作中的用户表达、信息组织、活动运营、跨角色沟通和项目推进。</li>
+                </ul>
+                <div class="row">
+                    <div class="org">专硕班级</div>
+                    <div class="role">专硕组织委员</div>
+                    <div class="date">研究生阶段</div>
+                </div>
+                <ul class="compact">
+                    <li>负责专硕班级事务组织、活动协调和同学沟通，具备较好的责任意识、执行力和组织协调能力。</li>
+                </ul>
+                <div class="row">
+                    <div class="org">本科校园经历</div>
+                    <div class="role">新媒体 / 社团 / 创新实践</div>
+                    <div class="date">本科阶段</div>
+                </div>
+                <ul class="compact">
+                    <li>自管会成员、院新媒体摄影部成员、电子与科技协会成员；参与科普视频制作并获得院级三等奖。</li>
+                    <li>参加“互联网+”红旅赛道、暑期“三下乡”社会实践、“返家乡”社会实践、京津冀大学生绿创大赛并获得校级三等奖。</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">资格证书</h2>
+                <p class="certs">
+                    <span>大学英语 CET-4 / CET-6</span>
+                    <span>普通话二级甲等</span>
+                    <span>高级中学数学教师资格证</span>
+                    <span>多次获得校级奖学金</span>
+                    <span>京津冀大学生绿创大赛校级三等奖</span>
+                    <span>科普视频院级三等奖</span>
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">个人优势</h2>
+                <ul>
+                    <li>具备人工智能专业背景和 Agent、RAG、语音 AI、医学影像 AI、计算机视觉等多类项目实践，能够理解模型能力边界并与算法、开发角色沟通。</li>
+                    <li>能从用户场景出发拆解 AI 产品需求，关注工具调用、状态流转、检索增强、幻觉控制、结果可信度与使用闭环。</li>
+                    <li>具备 Figma、Dify、Coze、ClaudeCode / Codex 等原型与 AI 工具使用经验，可快速完成概念验证和 Demo 表达。</li>
+                    <li>具备宣传策划、内容组织、活动协调与跨角色沟通经历，适合从 AI 产品经理实习生、大模型应用产品、Agent 产品方向切入。</li>
+                </ul>
+            </section>
+        </section>
+    </body>
+</html>
