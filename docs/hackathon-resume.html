@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>孙琦｜Hackathon Resume</title>
+        <style>
+            :root {
+                --ink: #142033;
+                --muted: #5b6472;
+                --line: #dbe3ef;
+                --blue: #2454ff;
+                --soft: #f6f8fc;
+                --chip: #eef3ff;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0;
+                min-height: 100%;
+                color: var(--ink);
+                background: #f3f6fb;
+                font-family:
+                    Arial,
+                    Microsoft YaHei,
+                    PingFang SC,
+                    sans-serif;
+            }
+            .page {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0 auto;
+                padding: 10mm;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .sheet {
+                width: 100%;
+                height: 277mm;
+                background: #fff;
+                border-radius: 18px;
+                overflow: hidden;
+                position: relative;
+                box-shadow: 0 18px 56px rgba(20, 32, 51, 0.12);
+                border: 1px solid #e7edf6;
+            }
+            .content {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 62mm 1fr;
+            }
+            aside {
+                padding: 16mm 8mm 10mm;
+                background: var(--soft);
+                border-right: 1px solid var(--line);
+            }
+            main {
+                padding: 15mm 10mm 10mm;
+            }
+            .photo-wrap {
+                width: 35mm;
+                height: 46mm;
+                margin: 0 auto 7mm;
+                border-radius: 14px;
+                padding: 3px;
+                background: #eaf0ff;
+                border: 1px solid #d7e2f4;
+                box-shadow: 0 10px 24px rgba(20, 32, 51, 0.1);
+            }
+            .photo {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 11px;
+                background: #fff;
+            }
+            h1 {
+                margin: 0;
+                font-size: 31px;
+                letter-spacing: 0.12em;
+                line-height: 1.05;
+            }
+            .role {
+                margin: 8px 0 0;
+                font-size: 13px;
+                color: var(--blue);
+                font-weight: 800;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+            .section {
+                margin-top: 7mm;
+            }
+            aside .section {
+                margin-top: 6mm;
+            }
+            .section-title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin: 0 0 9px;
+                font-size: 14px;
+                font-weight: 900;
+                letter-spacing: 0.08em;
+            }
+            .section-title:before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--blue);
+                box-shadow: 0 0 0 4px rgba(36, 84, 255, 0.1);
+                flex: 0 0 auto;
+            }
+            .contact,
+            .plain-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .contact li,
+            .plain-list li {
+                margin: 0 0 7px;
+                color: var(--muted);
+                font-size: 12px;
+                line-height: 1.55;
+            }
+            .contact strong {
+                color: var(--ink);
+            }
+            .chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .chip {
+                display: inline-flex;
+                align-items: center;
+                min-height: 24px;
+                padding: 4px 8px;
+                border-radius: 999px;
+                color: #18315f;
+                background: var(--chip);
+                border: 1px solid rgba(36, 84, 255, 0.14);
+                font-size: 11.3px;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+            .hero {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0;
+                align-items: start;
+                padding-bottom: 8mm;
+                border-bottom: 1px solid var(--line);
+            }
+            .statement {
+                margin: 10px 0 0;
+                max-width: 130mm;
+                color: #364155;
+                font-size: 13px;
+                line-height: 1.78;
+            }
+            .statement strong {
+                color: var(--ink);
+                font-weight: 900;
+            }
+            .edu {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 10px;
+                padding: 10px 12px;
+                border-radius: 14px;
+                background: #f8fbff;
+                border: 1px solid var(--line);
+            }
+            .edu h3 {
+                margin: 0 0 5px;
+                font-size: 14px;
+                line-height: 1.35;
+            }
+            .edu p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 12px;
+                line-height: 1.55;
+            }
+            .time {
+                color: var(--blue);
+                font-size: 12px;
+                font-weight: 900;
+                white-space: nowrap;
+            }
+            .project {
+                position: relative;
+                padding: 0 0 0 13px;
+                margin: 0 0 12px;
+                border-left: 2px solid #d9e4ff;
+            }
+            .project:before {
+                content: "";
+                position: absolute;
+                left: -5px;
+                top: 4px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--blue);
+                box-shadow: 0 0 0 4px rgba(36, 84, 255, 0.12);
+            }
+            .project-head {
+                display: flex;
+                justify-content: space-between;
+                gap: 8px;
+                align-items: baseline;
+                margin-bottom: 4px;
+            }
+            .project h3 {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.35;
+            }
+            .stack {
+                color: var(--blue);
+                font-size: 11px;
+                font-weight: 800;
+                white-space: nowrap;
+            }
+            .project p {
+                margin: 0 0 5px;
+                color: #3f4b5f;
+                font-size: 12.1px;
+                line-height: 1.66;
+            }
+            .project ul {
+                margin: 4px 0 0;
+                padding-left: 16px;
+                color: #3f4b5f;
+                font-size: 11.9px;
+                line-height: 1.62;
+            }
+            .project li {
+                margin: 0 0 3px;
+            }
+            .project b {
+                color: var(--ink);
+            }
+            .edu + .edu {
+                margin-top: 8px;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            @media print {
+                html,
+                body {
+                    background: #fff;
+                }
+                .page {
+                    width: 210mm;
+                    height: 297mm;
+                    padding: 0;
+                }
+                .sheet {
+                    height: 297mm;
+                    border-radius: 0;
+                    box-shadow: none;
+                    border: 0;
+                }
+                aside {
+                    padding-top: 17mm;
+                }
+                main {
+                    padding-top: 16mm;
+                }
+                * {
+                    print-color-adjust: exact;
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <article class="sheet" aria-label="孙琦 Hackathon 简历">
+                <div class="content">
+                    <aside>
+                        <div class="photo-wrap">
+                            <img
+                                class="photo"
+                                src="./证件照.png"
+                                alt="孙琦证件照"
+                            />
+                        </div>
+                        <section class="section">
+                            <h2 class="section-title">联系信息</h2>
+                            <ul class="contact">
+                                <li><strong>姓名</strong>｜孙琦</li>
+                                <li><strong>电话</strong>｜13021335906</li>
+                                <li>
+                                    <strong>邮箱</strong>｜sunqi772025@163.com
+                                </li>
+                                <li><strong>城市</strong>｜天津市滨海新区</li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h2 class="section-title">技术栈</h2>
+                            <div class="chips">
+                                <span class="chip">Python</span
+                                ><span class="chip">PyTorch</span
+                                ><span class="chip">FastAPI</span
+                                ><span class="chip">LangChain</span
+                                ><span class="chip">LangGraph</span
+                                ><span class="chip">RAG</span
+                                ><span class="chip">Vue3 / TS</span
+                                ><span class="chip">Figma</span
+                                ><span class="chip">ClaudeCode / Codex</span
+                                ><span class="chip">Vibe Coding</span>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2 class="section-title">证书与奖项</h2>
+                            <ul class="plain-list">
+                                <li>大学英语 CET-4 / CET-6</li>
+                                <li>普通话二级甲等</li>
+                                <li>高级中学数学教师资格证</li>
+                                <li>多次获得校级奖学金</li>
+                                <li>京津冀大学生绿创大赛校级三等奖</li>
+                                <li>科普视频院级三等奖</li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h2 class="section-title">校园经历</h2>
+                            <ul class="plain-list">
+                                <li>自管会成员、院新媒体摄影部成员</li>
+                                <li>电子与科技协会成员，参与科普内容制作</li>
+                                <li>参与“互联网+”红旅赛道与暑期社会实践</li>
+                            </ul>
+                        </section>
+                    </aside>
+                    <main>
+                        <header class="hero">
+                            <div>
+                                <h1>孙琦</h1>
+                                <p class="role">
+                                    AI Builder · Python / Agent / Full-stack
+                                </p>
+                                <p class="statement">
+                                    <strong
+                                        >我喜欢把一个还不太清楚的想法，慢慢拆成能跑起来、能讲明白、也能被别人用上的东西。</strong
+                                    >参加 Hackathon
+                                    对我来说不是只拼速度，而是和队友一起把问题想透、把方案做实；我偏工程落地，擅长用
+                                    Python 串起模型、接口和数据，让 Demo
+                                    不只停留在概念里。
+                                </p>
+                            </div>
+                        </header>
+                        <section class="section">
+                            <h2 class="section-title">教育背景</h2>
+                            <div class="edu">
+                                <div>
+                                    <h3>天津师范大学｜人工智能专业硕士</h3>
+                                </div>
+                                <div class="time">2025-至今</div>
+                            </div>
+                            <div class="edu">
+                                <div>
+                                    <h3>天津师范大学｜人工智能专业本科</h3>
+                                </div>
+                                <div class="time">2022-2025</div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2 class="section-title">项目经历</h2>
+                            <article class="project">
+                                <div class="project-head">
+                                    <h3>智能旅行规划 Agent 系统</h3>
+                                    <span class="stack"
+                                        >Python · LangChain · FastAPI ·
+                                        Vue3</span
+                                    >
+                                </div>
+                                <p>
+                                    面向自然语言出行需求，设计并实现一个可多轮交互的旅行规划
+                                    Agent。系统能够理解用户偏好、预算、天数与临时修改意图，并把路线、天气、POI、交通等真实信息组织成可执行行程。
+                                </p>
+                                <ul>
+                                    <li>
+                                        使用
+                                        <b>LangGraph</b>
+                                        组织状态图与节点流转，处理上下文记忆、意图路由、计划生成。
+                                    </li>
+                                    <li>
+                                        将高德地图 POI
+                                        搜索、天气查询、多交通路线规划封装为工具调用，减少大模型幻觉，让规划结果更贴近真实场景。
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="project">
+                                <div class="project-head">
+                                    <h3>道路裂缝语义分割系统</h3>
+                                    <span class="stack"
+                                        >Python · PyTorch · SegFormer</span
+                                    >
+                                </div>
+                                <p>
+                                    围绕道路裂缝像素级识别任务，完成数据清洗、模型训练、损失函数选择、指标评估与结果可视化。项目重点解决裂缝目标细、背景复杂、前景与背景像素极不均衡等问题。
+                                </p>
+                                <ul>
+                                    <li>
+                                        引入
+                                        <b>SegFormer + Mix Transformer</b>
+                                        结构，利用多尺度特征与长程依赖建模提升复杂背景下的裂缝识别能力。
+                                    </li>
+                                    <li>
+                                        独立处理近 4000 张图像，模型迭代 16
+                                        万步后稳定收敛，测试集
+                                        <b>mIoU 达 80%</b>，准确率接近 100%。
+                                    </li>
+                                </ul>
+                            </article>
+                            <article class="project">
+                                <div class="project-head">
+                                    <h3>OCT 影像智能分析平台</h3>
+                                    <span class="stack"
+                                        >Python · RAG · LangGraph · MCP</span
+                                    >
+                                </div>
+                                <p>
+                                    参与整合课题组内多个成熟深度学习模型，搭建统一的
+                                    OCT
+                                    影像分析平台，将支架检测与三维重建、关键帧提取与渲染、斑块分割、病例检索、血栓识别、坐标转换等功能串联到同一工作流中。
+                                </p>
+                                <ul>
+                                    <li>
+                                        基于 <b>LangGraph</b> 构建 ReAct
+                                        核心智能体，使系统能够根据医生或研究人员的分析目标自动规划任务步骤。
+                                    </li>
+                                    <li>
+                                        通过 Function Call / MCP
+                                        接入不同深度学习模型，支持分布式模型调用，降低多模型系统之间的耦合度。
+                                    </li>
+                                    <li>
+                                        使用 Faiss + BM25
+                                        设计病例检索方案，结合结构化信息与相似病例召回，提升影像分析过程中的信息获取效率。
+                                    </li>
+                                </ul>
+                            </article>
+                        </section>
+                    </main>
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
